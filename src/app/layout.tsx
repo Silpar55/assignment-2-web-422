@@ -1,6 +1,18 @@
+/*********************************************************************************
+ * WEB422 – Assignment 2
+ * I declare that this assignment is my own work in accordance with Seneca Academic Policy.
+ * No part of this assignment has been copied manually or electronically from any other source
+ * (including web sites) or distributed to other students.
+ *
+ * Name:Alejandro Silva Juarez Student ID:142655224 Date: 4/7/2024
+ *
+ *
+ ********************************************************************************/
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/NavBar/NavBar";
+import Form from "@/components/Form/Form";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        <Form />
+        {children}
+      </body>
     </html>
   );
 }
